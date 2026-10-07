@@ -1,17 +1,28 @@
 {
   "round": "round-4",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-007",
+  "queries_used": 148,
   "claims": [
     {
-      "type": "feature_effect",
-      "feature": "x1",
-      "direction": "increases",
+      "type": "decision_relationship",
+      "feature": "score",
+      "direction": "threshold_like",
       "strength": "strong",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "evidence": {
         "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "summary": "In the collected observations, the highest DECLINE score was 0.4110 and the lowest APPROVE score was 0.4554. This supports a threshold-like relationship between score and decision, but the exact production threshold has not been claimed."
+      }
+    },
+    {
+      "type": "surrogate_prediction",
+      "feature": "model_output",
+      "direction": "predicts_approve",
+      "strength": "model_prediction",
+      "confidence": null,
+      "evidence": {
+        "query_ids": [],
+        "summary": "The trained surrogate model predicted a score of 0.9554 and an APPROVE decision for the tested input configuration. This is a surrogate-model prediction, not a new GK-05 black-box observation."
       }
     }
   ]
